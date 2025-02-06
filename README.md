@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LesSpent
 
-## Getting Started
+## Description
+LesSpent is a web and mobile application focused on personal finance tracking. The main objective of this project is to provide a simple and efficient platform for users to log their daily expenses. This is a personal project aimed at improving financial awareness and budgeting.
 
-First, run the development server:
+## Features
+- 📝 Daily expense tracking
+- 📱 Mobile and web accessibility
+- 🔒 Secure data storage with AWS
+- 🎨 User-friendly interface designed with Figma
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Stack
+- **Frontend**: Next.js
+- **Backend & Infrastructure**: AWS with SST (Serverless Stack)
+- **Design & Prototyping**: Figma
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
+- Node.js
+- AWS CLI configured
+- SST (Serverless Stack) installed
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Steps
+1. Clone the repository:
+   ```sh
+   npm install
+   ```
+2. Install dependencies:
+   ```sh
+   npm run dev
+   ```
+3. Start the development server:
+   ```sh
+   git clone https://github.com/yourusername/les-spent.git
+   cd les-spent
+   ```
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+ 1. Deploy to AWS using SST:
+ ```sh
+ npx sst deploy
+ ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ ## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Since this is a personal project, contributions are currently not open. However, feedback and suggestions are welcome!
