@@ -43,6 +43,10 @@ LesSpent is a web and mobile application focused on personal finance tracking. T
  npx sst deploy
  ```
 
- ## Contributing
+## Host
+
+LesSpent is available at: [https://lesspent.com.br/](lesspent.com.br)
+
+## Contributing
 
 Since this is a personal project, contributions are currently not open. However, feedback and suggestions are welcome!
