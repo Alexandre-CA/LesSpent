@@ -70,9 +70,9 @@ src
 │
 ├── functions     # Global server functions
 │       └── example-function
-│                ├── index.tsx     # function code
-│                ├── index.test.tsx     # function test
-│                └── type.d.ts     # function type
+│                ├── index.tsx     # Function code
+│                ├── index.test.tsx     # Function test
+│                └── type.d.ts     # Function type
 │
 └── utils        # Generic Functions
 ```
