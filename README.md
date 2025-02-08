@@ -43,6 +43,40 @@ LesSpent is a web and mobile application focused on personal finance tracking. T
  npx sst deploy
  ```
 
+## Folder Structure
+
+```bash
+src
+├── app     # Next App Routes
+│        ├── example-page     
+│        │       ├── page.tsx     # Rendering page
+│        │       ├── component.tsx     # Principal page component
+│        │       ├── layout.tsx     # Page layout
+│        │       └── type.d.ts     # Principal page component type
+│        └── api    # Project APIs   
+│                 └── example-component 
+│                          ├── index.tsx     # Component code
+│                          ├── index.test.tsx     # Component test
+│                          └── type.d.ts     # Component  type
+│
+├── components     # Global components with can use in every project
+│       └── example-component 
+│                ├── index.tsx     # Component code
+│                ├── index.test.tsx     # Component test
+│                └── type.d.ts     # Component  type
+│
+├── hooks        # Global hooks
+├── contexts     # Global context
+│
+├── functions     # Global server functions
+│       └── example-function
+│                ├── index.tsx     # function code
+│                ├── index.test.tsx     # function test
+│                └── type.d.ts     # function type
+│
+└── utils        # Generic Functions
+```
+
 ## Host
 
 LesSpent is available at: [https://lesspent.com.br/](lesspent.com.br)
