@@ -1,5 +1,5 @@
 // import readline from 'readline';
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from "@prisma/client";
 
 // const rl = readline.createInterface({
 //   input: process.stdin,
@@ -39,8 +39,7 @@ async function main() {
 
   // const prisma = new PrismaClient();
 
-
-  console.log('✅ Seed concluído com sucesso!');
+  console.log("✅ Seed concluído com sucesso!");
 }
 
 main()
