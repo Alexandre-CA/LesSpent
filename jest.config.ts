@@ -3,18 +3,17 @@
  * https://jestjs.io/docs/configuration
  */
 
-import nextJest from "next/jest.js"
+import nextJest from "next/jest.js";
 
 import { config } from "dotenv";
 
-import type { Config } from 'jest';
+import type { Config } from "jest";
 
 config({ path: ".env.development" });
 
 const createJestConfig = nextJest({
   dir: ".",
 });
-
 
 const jestConfig: Config = {
   // All imported modules in your tests should be mocked automatically
@@ -84,9 +83,7 @@ const jestConfig: Config = {
   // maxWorkers: "50%",
 
   // An array of directory names to be searched recursively up from the requiring module's location
-  moduleDirectories: [
-    "node_modules", "<rootDir>"
-  ],
+  moduleDirectories: ["node_modules", "<rootDir>"],
 
   // An array of file extensions your modules use
   // moduleFileExtensions: [
@@ -148,7 +145,7 @@ const jestConfig: Config = {
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  // setupFilesAfterEnv: [],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
@@ -157,7 +154,7 @@ const jestConfig: Config = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  // testEnvironment: "jest-environment-node",
+  testEnvironment: "jsdom",
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -207,4 +204,4 @@ const jestConfig: Config = {
   // watchman: true,
 };
 
-export default jestConfig;
+export default createJestConfig(jestConfig);
