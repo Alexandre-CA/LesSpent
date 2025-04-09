@@ -1,4 +1,13 @@
 {
   "extends": ["next/core-web-vitals", "next/typescript", "eslint:recommended", "plugin:jest/recommended", "prettier"],
-  "ignorePatterns": ["node_modules/*", ".next/*", "out/*", "!.eslintrc.json"]
+  "ignorePatterns": ["node_modules/*", ".next/*", "out/*", "!.eslintrc.json"],
+  "plugins": ["@typescript-eslint", "react", "react-hooks", "prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  }
 }
