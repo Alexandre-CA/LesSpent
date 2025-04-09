@@ -1,3 +1,6 @@
 {
-  "cSpell.words": ["postgres"]
+  "cSpell.words": [
+    "commitlint",
+    "postgres"
+  ]
 }
