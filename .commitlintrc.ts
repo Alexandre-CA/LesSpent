@@ -1,4 +1,3 @@
-
 const starts_prefix = [
   ":sparkles: feat:",
   ":recycle: refactor",
@@ -7,8 +6,8 @@ const starts_prefix = [
   ":test_tube: test:",
   ":books: docs:",
   ":tada: init:",
-  ":bug: fix:"
-]
+  ":bug: fix:",
+];
 
 const Configuration = {
   /*
@@ -30,32 +29,40 @@ const Configuration = {
    * Any rules defined here will override rules from @commitlint/config-conventional
    */
   rules: {
-    'subject-empty': [0, 'never'],
-    'type-empty': [0, 'never'],
-    "start-prefix-icon": [1, "always"],
+    "subject-empty": [0, "never"],
+    "type-empty": [0, "never"],
+    "start-prefix-icon": [2, "always"],
     "contain-subject": [2, "always"],
   },
   plugins: [
     {
       rules: {
         "start-prefix-icon": ({ header }) => {
+          const validate = starts_prefix.some((start) => header.startsWith(start));
+
+          if (validate) {
+            return [true];
+          }
           return [
-            starts_prefix.some((start) => header.startsWith(start)),
-            `The commit message must start with one of the predefined icons: [${starts_prefix.join(", ")}] `
+            false,
+            `The commit message must start with one of the predefined icons: [${starts_prefix.join(", ")}] `,
           ];
         },
         "contain-subject": ({ header }) => {
-          const prefix = starts_prefix.find((x)=>{
-            return header.startsWith(x)
-        })
-          return [
-            header.replace(prefix,"").trim().length > 0,
-            `subject may not be empty`
-          ];
-        }
-      }
-    }
-  ]
+          const prefix = starts_prefix.find((x) => {
+            return header.startsWith(x);
+          });
+
+          const validate = header.replace(prefix, "").trim().length > 0;
+
+          if (validate) {
+            return [true];
+          }
+          return [false, `subject may not be empty`];
+        },
+      },
+    },
+  ],
   /*
    * Array of functions that return true if commitlint should ignore the given message.
    * Given array is merged with predefined functions, which consist of matchers like:
