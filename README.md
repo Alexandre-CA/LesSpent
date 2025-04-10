@@ -29,11 +29,11 @@ LesSpent is a web and mobile application focused on personal finance tracking. T
 
 1. Clone the repository:
    ```sh
-   npm install
+   pnpm install
    ```
 2. Install dependencies:
    ```sh
-   npm run dev
+   pnpm dev
    ```
 3. Start the development server:
    ```sh
