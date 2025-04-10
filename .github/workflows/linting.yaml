@@ -13,18 +13,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "22.14.0"
-          cache: "pnpm"
-
-      - name: Install PNPM
-        uses: pnpm/action-setup@v4
-        with:
-          version: "10.2.0"
 
       - name: Install dependencies
-        run: pnpm i --frozen-lockfile
+        run: npm i
 
       - name: Run Lint
-        run: pnpm run lint:prettier:check
+        run: npm run lint:prettier:check
 
   eslint:
     name: EsLint
@@ -36,18 +30,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "22.14.0"
-          cache: "pnpm"
-
-      - name: Install PNPM
-        uses: pnpm/action-setup@v4
-        with:
-          version: "10.2.0"
 
       - name: Install dependencies
-        run: pnpm i --frozen-lockfile
+        run: npm i
 
       - name: Run Lint
-        run: pnpm run lint:eslint:check
+        run: npm run lint:eslint:check
 
   commitLint:
     name: CommitLint
@@ -61,15 +49,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "22.14.0"
-          cache: "pnpm"
-
-      - name: Install PNPM
-        uses: pnpm/action-setup@v4
-        with:
-          version: "10.2.0"
 
       - name: Install dependencies
-        run: pnpm i --frozen-lockfile
+        run: npm i
 
       - name: Validate PR commits with CommitLint
         run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
